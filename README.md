@@ -5,6 +5,12 @@ Sample project for evaling front-end development techniques and skills.
 ## Goal:
 Create client side JavaScript app that lists 500 users in a table.
 
+Example:
+
+![Sample](./sample.png)
+
+----
+
 ## Step 1
 
 ### Data
@@ -33,7 +39,3 @@ Create client side JavaScript app that lists 500 users in a table.
 ## Step 4
 
 - Add unit tests for important logic above.
-
-Example:
-
-![Sample](./sample.png)
