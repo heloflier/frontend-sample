@@ -20,7 +20,6 @@ Example:
 ### Table
 - Display the user's first name, last name, and email address in each column.
 - Clicking the user's email will open an email client.
-- The table header should show which column is currently sorted by, and direction.
 
 ## Step 2
 
@@ -34,6 +33,7 @@ Example:
 
 #### Sorting
 - The table should be sortable by each column.
+- The table header should show which column is currently sorted by, and direction.
 - Clicking on a new column will sort the new column ascending.
 - Clicking on the currently sorted column will reverse the sort direction.
 
