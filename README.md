@@ -23,7 +23,7 @@ Create client side JavaScript app that lists 500 users in a table.
 - There should be controls below the table to go to next page, previous page, etc
 	- If there is no previous or next page, the links should be hidden or disabled.
 
-# Step 3
+## Step 3
 
 #### Sorting
 - The table should be sortable by each column.
