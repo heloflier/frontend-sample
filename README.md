@@ -4,6 +4,7 @@ Sample project for evaling front-end development techniques and skills.
 
 ## Goal:
 Create client side JavaScript app that lists 500 users in a table.
+Visual look is optional, can use default HTML styling.
 
 Example:
 
@@ -20,12 +21,12 @@ Example:
 - Display the user's first name, last name, and email address in each column.
 - Clicking the user's email will open an email client.
 - The table header should show which column is currently sorted by, and direction.
-- The table should show only 10 users at a time.
 
 ## Step 2
 
 #### Pagination
-- There should be an indicator below the table showing which users are visible
+- The table should show only 10 users at a time.
+- There should be a page indicator below the table showing which users are visible
 - There should be controls below the table to go to next page, previous page, etc
 	- If there is no previous or next page, the links should be hidden or disabled.
 
