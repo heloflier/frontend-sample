@@ -1,0 +1,39 @@
+.fa-pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-pagination ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.fa-pagination ul li {
+    padding: 10px;
+    font-size: 22px;
+    min-width: 30px;
+    min-height: 30px;
+    text-align: center;
+    border: 1px solid lightgray;
+    transition: background 100ms ease-in-out, 
+                transform 150ms ease;
+}
+
+/* .fa-pagination ul li:active {
+    background-color: lightgray;
+} */
+
+.fa-pagination ul li a {
+    text-decoration: none;
+}
+
+.fa-pagination ul li:hover, 
+/* .fa-pagination ul li:focus, */
+.fa-pagination .active {
+    background-color: lightgray;
+}
+
+/* .fa-pagination ul li:active {
+    transform: scale(0.99);
+} */

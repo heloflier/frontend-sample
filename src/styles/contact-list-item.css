@@ -1,0 +1,15 @@
+.fa-contact-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fa-contact-list-item:nth-child(even) {
+    background: #f2f2f2;
+  }
+
+.fa-contact-list-item-element {
+    width: 33%;
+    font-size: 18px;
+}
