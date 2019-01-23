@@ -4,7 +4,6 @@ import '../styles/list-header.css';
 class ListHeader extends Component {
 
     handleClick = (sortBy) => {
-        console.log('wowza! you clicked me with sortBy: ', this.props);
         const { onSortChange = f => f } = this.props;
         let ascending = !this.props.filters.ascending;
 
@@ -12,8 +11,6 @@ class ListHeader extends Component {
             sortBy,
             ascending
         };
-        console.log('wowza! you clicked me with filters: ', filters);
-
 
         this.setState({ filters }, () => onSortChange(filters));
     }

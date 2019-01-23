@@ -12,7 +12,7 @@ class App extends Component {
         isLoaded: false,
         allContacts: [],
         currentContacts: [],
-        totalRequestedContacts: 101,
+        totalRequestedContacts: 100,
         resultsPerPage: 10,
         currentPage: null,
         totalPages: null,
@@ -34,9 +34,6 @@ class App extends Component {
                         sortedContacts: data.results
                     });
                 },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
                 (error) => {
                     this.setState({
                         isLoaded: true,
@@ -47,8 +44,6 @@ class App extends Component {
     }
 
     onPageChanged = (data) => {
-        console.log('=============== onPageChanged fired', data);
-        console.log('=============== onPageChanged fired', this.state);
         const { allContacts, resultsPerPage } = this.state;
         const { currentPage, totalPages } = data;
 
@@ -59,15 +54,12 @@ class App extends Component {
     }
 
     onSortChange = (filters) => {
-        console.log('&&&&&&&&&&  onSortChange fired ', filters);
 
         const sortedContacts = contactSort(this.state.allContacts, filters);
-        // console.log('*****************sortchange sorted: ', sortedContacts);
-
         const { resultsPerPage, currentPage } = this.state;
-
         const offset = (currentPage - 1) * resultsPerPage;
         const currentContacts = sortedContacts.slice(offset, offset + resultsPerPage);
+
         // move the sorted file into the state
         this.setState(() => ({ 
             allContacts: sortedContacts,
@@ -77,7 +69,6 @@ class App extends Component {
     }
 
     render() {
-        // eslint-disable-next-line
         const { error, isLoaded, allContacts } = this.state;
         const totalContacts = allContacts.length;
         if (error) {
@@ -86,7 +77,6 @@ class App extends Component {
             return <div>Loading...</div>;
         } else if (allContacts.length === 0) {
             return <h2>No contacts</h2>
-
 
         } else {
             return (

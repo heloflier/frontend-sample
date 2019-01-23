@@ -20,15 +20,6 @@
     background: gray;
 }
 
-/* button:focus { */
-    /* outline: 1px solid #fff; */
-    /* outline-offset: -4px; */
-/* } */
-
-/* .fa-list-header-titles button:active {
-    transform: scale(0.99);
-} */
-
 .fa-list-header-titles {
     display: flex;
     flex-direction: row;

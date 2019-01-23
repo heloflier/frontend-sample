@@ -2,9 +2,6 @@ const contactSort = (contacts = [], filters) => {
 
     //take in array and filters and return sorted array
 
-    // console.log('contactSort contacts: ', contacts);
-    // console.log('contactSort filters: ', filters);
-
     const ascending = filters.ascending;
 
     const sortedContacts = contacts.sort((a, b) => {
@@ -38,7 +35,6 @@ const contactSort = (contacts = [], filters) => {
             else return 1;
         }
     });
-    // console.log('sorted contacts: ', sortedContacts);
     return sortedContacts;
 };
 

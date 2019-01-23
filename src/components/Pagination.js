@@ -13,14 +13,9 @@ class Pagination extends Component {
         super(props);
 
         // determining the total number of pages
-        this.totalContacts = props.contacts.length;
         const resultsPerPage = props.resultsPerPage;
-
-        console.log('totalContacts: ', this.totalContacts);
-
+        this.totalContacts = props.contacts.length;
         this.totalPages = Math.ceil(this.totalContacts / resultsPerPage);
-
-        // console.log('number of pages: ', this.totalPages);
 
         this.state = { currentPage: 1 };
     }
@@ -32,18 +27,15 @@ class Pagination extends Component {
         const currentPage = this.state.currentPage;
         
         // establishing the total number of pages to show on the control widget
-        // including first and last
         return paginationArrayGenerator(totalPages, currentPage);
-
     }
+    
     componentDidMount() {
         this.gotoPage(1);
     }
 
     gotoPage = page => {
-        // console.log('goto page: ', page);
         const { onPageChanged = f => f } = this.props;
-
         const currentPage = Math.max(0, Math.min(page, this.totalPages));
 
         const paginationData = {
@@ -57,17 +49,14 @@ class Pagination extends Component {
     }
 
     handleClick = (page) => {
-        console.log('wowza! you clicked me with page number: ', page);
         this.gotoPage(page);
     }
 
     handleMoveLeft = (index) => {
-        console.log('moving left from ', index);
         this.gotoPage(this.state.currentPage -3);
     }
 
     handleMoveRight = (index) => {
-        console.log('moving right from ', index);
         this.gotoPage(this.state.currentPage +3);
     }
 
@@ -76,13 +65,9 @@ class Pagination extends Component {
         const lastPage = this.totalPages;
         const displayCountStart = ((this.state.currentPage -1) * 10 + 1 );
         const displayCountEnd = ((this.state.currentPage -1) * 10 + this.props.numberDisplayed);
-        console.log('pages: ', pages);
-        console.log('displayCountEnd: ', displayCountEnd);
 
         return (
             <div className='fa-pagination'>
-                <h3>Pages: {pages}</h3>
-                <h3>Pages {this.state.currentPage} of {lastPage}</h3>
                 <h3>Displaying {displayCountStart}{(displayCountStart !== displayCountEnd) && `-${displayCountEnd}`} of {this.totalContacts}</h3>
                 <ul>
                     {pages.map((page, index) => {
