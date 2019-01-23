@@ -18,14 +18,15 @@ const paginationArrayGenerator = (totalPages, currentPage) => {
 
         const startPage = Math.max(1, currentPage - 2);
         const endPage = Math.min(totalPages, currentPage + 2);
-        // console.log('startPage: ', startPage);
-        // console.log('endpage: ', endPage);
+        console.log('startPage: ', startPage);
+        console.log('endpage: ', endPage);
+        console.log('totalPages: ', totalPages);
 
         let pagesToShow = _.range(startPage, endPage + 1);
-        // console.log('pagesToShow: ', pagesToShow);
+        console.log('pagesToShow: ', pagesToShow);
 
-        const hasHiddenPagesLeft = startPage > 2;
-        const hasHiddenPagesRight = (totalPages - endPage) > 1;
+        const hasHiddenPagesLeft = startPage > 1;
+        const hasHiddenPagesRight = (totalPages - endPage) > 0;
 
         switch (true) {
             // handle: (1) < {5 6} [7] {8 9} (10)

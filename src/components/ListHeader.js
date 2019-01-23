@@ -25,9 +25,45 @@ class ListHeader extends Component {
                     <h2>Users: {this.props.totalContacts}</h2>
                 </div>
                 <div className='fa-list-header-titles'>
-                    <button className='fa-list-header-titles-button' onClick={() => this.handleClick('first')}>First Name</button>
-                    <button className='fa-list-header-titles-button' onClick={() => this.handleClick('last')}>Last Name</button>
-                    <button className='fa-list-header-titles-button' onClick={() => this.handleClick('email')}>email</button>
+                    <button
+                        className={`fa-list-header-titles-button ${this.props.filters.sortBy === 'first' ? ' active' : ''}`}
+                        onClick={() => this.handleClick('first')}
+                    >
+                        First Name
+                        <div className='fa-list-header-titles-button-sort-direction'>
+                            {this.props.filters.ascending ? (<div>&#9650;</div>) : (<div>&#9660;</div>)}
+                        </div>
+                        <div className='fa-list-header-titles-button-no-sort'>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9650;</div>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9660;</div>
+                        </div>
+                    </button>
+                    <button
+                        className={`fa-list-header-titles-button ${this.props.filters.sortBy === 'last' ? ' active' : ''}`}
+                        onClick={() => this.handleClick('last')}
+                    >
+                        <div>Last Name</div>
+                        <div className='fa-list-header-titles-button-sort-direction'>
+                            {this.props.filters.ascending ? (<div>&#9650;</div>) : (<div>&#9660;</div>)}
+                        </div>
+                        <div className='fa-list-header-titles-button-no-sort'>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9650;</div>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9660;</div>
+                        </div>
+                    </button>
+                    <button
+                        className={`fa-list-header-titles-button ${this.props.filters.sortBy === 'email' ? ' active' : ''}`}
+                        onClick={() => this.handleClick('email')}
+                    >
+                        email
+                        <div className='fa-list-header-titles-button-sort-direction'>
+                            {this.props.filters.ascending ? (<div>&#9650;</div>) : (<div>&#9660;</div>)}
+                        </div>
+                        <div className='fa-list-header-titles-button-no-sort'>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9650;</div>
+                            <div className='fa-list-header-titles-button-no-sort-arrow'>&#9660;</div>
+                        </div>
+                    </button>
                 </div>
             </div>
         );

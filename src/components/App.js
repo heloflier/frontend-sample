@@ -12,12 +12,12 @@ class App extends Component {
         isLoaded: false,
         allContacts: [],
         currentContacts: [],
-        totalRequestedContacts: 100,
+        totalRequestedContacts: 101,
         resultsPerPage: 10,
         currentPage: null,
         totalPages: null,
         filters: {
-            sortBy: 'first',
+            sortBy: null,
             ascending: true
         }
     };
@@ -100,6 +100,7 @@ class App extends Component {
                     <Pagination
                         contacts={this.state.allContacts}
                         resultsPerPage={this.state.resultsPerPage}
+                        numberDisplayed={this.state.currentContacts.length}
                         onPageChanged={this.onPageChanged}
                     />
                 </div >
