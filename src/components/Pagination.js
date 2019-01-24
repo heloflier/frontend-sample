@@ -18,16 +18,6 @@ class Pagination extends Component {
 
         this.state = { currentPage: 1 };
     }
-
-    fetchPageNumbers = () => {
-
-        // local variables for convenience
-        const totalPages = this.totalPages;
-        const currentPage = this.state.currentPage;
-        
-        // establishing the total number of pages to show on the control widget
-        return paginationArrayGenerator(totalPages, currentPage);
-    }
     
     componentDidMount() {
         this.gotoPage(1);
@@ -45,6 +35,16 @@ class Pagination extends Component {
         };
 
         this.setState({ currentPage }, () => onPageChanged(paginationData));
+    }
+    
+    fetchPageNumbers = () => {
+
+        // local variables for convenience
+        const totalPages = this.totalPages;
+        const currentPage = this.state.currentPage;
+        
+        // establishing the total number of pages to show on the control widget
+        return paginationArrayGenerator(totalPages, currentPage);
     }
 
     handleClick = (page) => {
