@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Deployed App
 
-This project has been deployed to Heroku. You can view it and interact with it [here] (https://appfolio-frontend-sample.herokuapp.com).
+This project has been deployed to Heroku. You can view it and interact with it here: https://appfolio-frontend-sample.herokuapp.com.
 
 
 
