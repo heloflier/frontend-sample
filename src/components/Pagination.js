@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import '../styles/pagination.css';
 import paginationArrayGenerator from '../actions/paginationArrayGenerator';

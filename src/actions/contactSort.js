@@ -1,4 +1,4 @@
-const contactSort = (contacts = [], filters) => {
+export const contactSort = (contacts = [], filters) => {
 
     //take in array and filters and return sorted array
 
